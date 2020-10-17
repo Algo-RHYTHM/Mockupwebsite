@@ -48,7 +48,7 @@ body
  box-sizing:border-box;
  background-color:  #0d44a0;
  /* background: linear-gradient(#e27b41, #0d44a0, #acbfd0, #ffffff); */
- background-image: linear-gradient( #e65d0e 30%,  #0d44a0 100%);
+ background-image: linear-gradient( #e27b41 30%,  #0d44a0 100%);
  border-radius:10px;
  color:#ffffff;
 }
