@@ -1,0 +1,154 @@
+body
+{
+ margin:0px auto;
+ padding:0px;
+ text-align:center;
+ width:100%;
+ font-family: "Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+ background: linear-gradient(#234996, #0d44a0 100%);
+}
+#header
+{
+ width:100%;
+ margin:0px auto;
+ padding:0px;
+ text-align:center;
+ height:70px;
+ line-height:70px;
+ background-color: linear-gradient(#e27b41, #0d44a0  100%);
+ background: linear-gradient( #e27b41 70%,  #0d44a0 100%);
+}
+#header li
+{
+ display:inline-block;
+ margin-right:25px;
+ font-size:17px;
+ color:#000000;
+ font-weight:bold;
+ cursor:pointer;
+ float: right;
+ color: #ffffff;
+}
+#header #site_name
+{
+ text-align:left;
+ width:680px;
+ font-size:35px;
+ margin-left:20px;
+}
+#home,#about,#contact
+{
+ margin-top:100px;
+ width:90%;
+ height:400px;
+ margin-left:5%;
+ padding:50px;
+ border-width: 10px;
+ border-color: #ffffff;
+ box-sizing:border-box;
+ background-color:  #0d44a0;
+ /* background: linear-gradient(#e27b41, #0d44a0, #acbfd0, #ffffff); */
+ background-image: linear-gradient( #e65d0e 30%,  #0d44a0 100%);
+ border-radius:10px;
+ color:#ffffff;
+}
+#home h1
+{
+ font-size:40px;
+}
+#home p
+{
+ font-size:20px;
+}
+#about p
+{
+ font-size:20px;
+}
+#contact input[type="text"]
+{
+ width:250px;
+ height:35px;
+ padding-left:10px;
+ float:left;
+ margin-left:80px;
+ border:none;
+}
+#contact textarea
+{
+ float:left;
+ width:250px;
+ height:35px;
+ margin-left:20px;
+ border:none;
+ padding-left:10px;
+ padding-top:10px;
+}
+#contact input[type="submit"]
+{
+ float:left;
+ margin-left:20px;
+ height:35px;
+ width:100px;
+ background:none;
+ color:white;
+ border:1px solid white;
+}
+
+.logo{
+    float: left;
+    background: url(../images/logo.jpg);
+    position: absolute;
+    left: 2%;
+    top: 2.2%;
+    z-index: 1;
+    width: 70px;
+    height: 40px;
+}
+
+.fullscreen-bg {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+/* .fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 210%;
+} */
+
+.page-header-bg-image-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
