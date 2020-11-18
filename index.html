@@ -4,13 +4,16 @@
 <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
 <script type="text/javascript" src="http://jquery.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+
 
 function scrollto(div)
 {
  $('html,body').animate(
  {
-  scrollTop: $("#"+div).offset().top
+  scrollTop: $("#"+div).offset().top-70
  },'slow');
 }
 
@@ -22,21 +25,30 @@ function scrollto(div)
 // var header = document.getElementById("header");
 // var sticky = header.offsetTop;
 
-window.onscroll = function() {scrollFunction()};
+// window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("header").style.top = "0";
-  } else {
-    document.getElementById("header").style.top = "-50px";
-  }
-}
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     document.getElementById("header").style.top = "0";
+//   } else {
+//     document.getElementById("header").style.top = "-50px";
+//   }
+// }
+
+$(window).scroll(function() {
+      if ($(this).scrollTop() > 1){
+      $('#header').addClass('sticky');
+      }
+      // else{
+      // $('#header').removeClass('sticky');
+      // }
+});
 
 </script>
 </head>
 <body>
 
-    <div id="header">
+    <div id="header" class="sticky">
         <!-- <li><a href="index.html#contact"></a>CONTACT</li>
         <li><a href="#about"></a>ABOUT</li>
         <li><a href="index.html#home"></a>HOME</li> -->
@@ -49,27 +61,55 @@ function scrollFunction() {
        </div>
 
 <div class="fullscreen-bg">
-    <img src="assets/images/cover-final.png" alt="logo" width="1400" height="800">
+  <div style="top: 50px; float: left; width: auto; padding-top: 5%;
+  padding-left: 5%; ">
+  <h1 class="fontColor" style="float: left;">G I R G I T L E</h1>
+  </div>
+  <div>
+    <!-- <img src="assets/images/cover-final.png" alt="logo" width="1400" height="800"> -->
+      <img src="assets/images/cover_nobg.png" alt="logo" style="width: 41%; float: right;
+      margin-right: 7.5%;">
     </div>
-<div id="home">
+    </div>
+<div id="home" style="margin-top: 0px !important;">
   <div style="border: 1px;">
-    <h1>Demo Of One Page Website Template Using HTML, CSS And jQuery<p>TalkersCode.com</p></h1>
+    <h1 class="fontColor">OUR STORY</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit amet consectetur lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
    </div>
   </div>
    
    <div id="about">
     <p>In this tutorial we will show you how to create One Page Website Template Using HTML, CSS And jQuery.Now you can build simple and beautiful website quickly.</p>
-    <p>TalkersCode.com is a complete destination to learn Web Development with Best, Fast and Easy Methods for those who is a novice and wants to be the Xpert in Web Development.</p>
+    <!-- <p>TalkersCode.com is a complete destination to learn Web Development with Best, Fast and Easy Methods for those who is a novice and wants to be the Xpert in Web Development.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit amet consectetur lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit amet consectetur lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit amet consectetur lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p> -->
    </div>
    
    <div id="contact">
-   <h1>If you have any question or query you can contact us at <br>girgitleultimate@gmail.com <br><br>or you can fill the form below</h1>
-   <input type="text" placeholder="Name">
+     <h1 style="text-align: center; margin-bottom: 40px;"> CONTACT US</h1>
+   <!-- <h1>If you have any question or query you can contact us at <br>girgitleultimate@gmail.com <br><br>or you can fill the form below</h1> -->
+   <!-- <input type="text" placeholder="Name">
    <textarea placeholder="Message"></textarea>
-   <input type="submit" value="SEND">
+   <input type="submit" value="SEND"> -->
+   <div class="row">
+     <div style="position: relative; display: flex;">
+    <img src="assets/images/instagram.svg" alt="logo" class="smedia"  style="float: left;">
+   <div class="col-sm" style="cursor: pointer;  float: right;">I N ST A<br/>
+     <a href="https://www.instagram.com/girgitle_ultimate/" target="_blank" style="color: white;">Instagram.com/girgitle_ultimate</a>
+   </div>
+  </div>
+  <div style="position: relative; display: flex;">
+   <img src="assets/images/facebook.svg" alt="logo" class="smedia">
+   <div class="col-sm" style="cursor: pointer;  float: right;">F B<br/>
+     <a href="https://www.facebook.com/girgitlemysore" style="cursor: pointer; color: white;" target="_blank">facebook.com/girgitlemysore</a>
+   </div>
+  </div>
+  <diV style="position: relative; display: flex;">
+   <img src="assets/images/gmail.svg" alt="logo" class="smedia">
+   <div class="col-sm" style="cursor: pointer;  float: right;">G M A I L<br/>
+     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=girgitleultimate@gmail.com&su=subject_here&body=body_here" target="_blank" style="color: white;">girgitleultimate@gmail.com</a>
+   </div>
+  </div>
    </div>
    
 
