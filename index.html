@@ -5,6 +5,7 @@
 <script type="text/javascript" src="http://jquery.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 
@@ -17,6 +18,23 @@ function scrollto(div)
  },'slow');
 }
 
+function scrolltomobile(div)
+{
+ $('html,body').animate(
+ {
+  scrollTop: $("#"+div).offset().top-250
+ },'slow');
+}
+
+
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 
 
 
@@ -58,6 +76,20 @@ $(window).scroll(function() {
         <!-- <div style="background-image: url('assets/images/logo.jpg'); float: left;"></div> -->
         <!-- <li onclick="scrollto('home');">HOME</li> -->
         <img src="assets/images/logo.jpg" alt="logo" class="logo"></div>
+    
+
+        <header class="header">
+          <img src="assets/images/logo.jpg" alt="logo" class="logo">
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+          <ul class="menu">
+            <li onclick="scrolltomobile('contact');"></a>CONTACT</li>
+            <li onclick="scrolltomobile('about');">ABOUT</li>
+            <li onclick="scrolltomobile('home');"></a>HOME</li>
+          </ul>
+        </header>
+
+
        </div>
 
 <div class="fullscreen-bg">

@@ -28,7 +28,8 @@ body
  margin:0px auto;
  padding:0px;
  text-align:center;
- height:70px;
+ /* height:70px; */
+ height: 18%;
  line-height:70px;
  border: none;
  /* background-color: linear-gradient(#e27b41, #0d44a0  100%);
@@ -58,9 +59,10 @@ body
 #home,#about,#contact
 {
  margin-top:100px;
- width:90%;
+ /* width:90%; */
+ width:100%;
  height:auto;
- margin-left:5%;
+ /* margin-left:5%; */
  padding:50px;
  border-width: 10px;
  border-color: #ffffff;
@@ -69,7 +71,7 @@ body
  /* background: linear-gradient(#e27b41, #0d44a0, #acbfd0, #ffffff); */
  /* background-image: linear-gradient( #e27b41 30%,  #0d44a0 100%);  */
  background-image: linear-gradient( #f76513 30%,  #0d44a0 100%);
- border-radius:10px;
+ /* border-radius:10px; */
  color:#ffffff;
 }
 #home h1
@@ -122,7 +124,7 @@ body
     top: 9.2%;
     z-index: 1;
     width: 70px;
-    height: 40px;
+    height: 42px;
 }
 
 .fullscreen-bg {
@@ -181,7 +183,7 @@ body
     flex-direction: row;            /* default value; can be omitted */
     flex-wrap: nowrap;              /* default value; can be omitted */
     justify-content: space-between; /* switched from default (flex-start, see below) */
- 
+    z-index: 1;
   }
 
   .smedia{
@@ -207,3 +209,170 @@ body
   .relative{
     position: relative;
   }
+
+/* header */
+
+.header {
+  /* background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3; */
+  position: fixed;
+  width:100%;
+  margin:0px auto;
+  padding:0px;
+  line-height:58px;
+  border: none;
+ 
+  /* background-color: linear-gradient(#e27b41, #0d44a0  100%);
+  background: linear-gradient( #e27b41 70%,  #0d44a0 100%);  */
+  /* background: linear-gradient( #f76513 70%,  #0d44a0 100%); */
+  background: #ffffff;
+}
+
+.header ul {
+  /* margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff; */
+  list-style: none;
+ margin-right:10px;
+ font-size:17px;
+ color:#000000;
+ font-weight:bold;
+ cursor:pointer;
+ overflow: hidden;
+ /* float: right; */
+ /* color: #ffffff; */
+ color:  -webkit-linear-gradient(#e27b41, #000000);
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 185px;
+ z-index: 999;
+ padding-left: 25px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+@media(min-width:767px){
+   .header {
+      display: none;
+    }
+  }
+
+  @media(max-width:767px){
+    #header {
+       display: none;
+     }
+   }
+ 
