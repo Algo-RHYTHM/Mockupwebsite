@@ -192,6 +192,7 @@ body
   }
 
   .fontColor{
+    font-size: 5vw;
     font-weight: bolder;
     text-align: center;
     background: -webkit-linear-gradient(#e27b41, #000000);
